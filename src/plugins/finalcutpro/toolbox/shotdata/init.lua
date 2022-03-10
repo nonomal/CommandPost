@@ -19,7 +19,7 @@ local fcpxml                    = require "cp.apple.fcpxml"
 local i18n                      = require "cp.i18n"
 local tools                     = require "cp.tools"
 
-local xml                       = require "hs._asm.xml"
+local xml                       = require "hs.xml"
 
 local chooseFileOrFolder        = dialog.chooseFileOrFolder
 local copy                      = fnutils.copy

@@ -12,7 +12,7 @@ local battery       = require "hs.battery"
 
 local i18n          = require "cp.i18n"
 
-local cfpreferences = require "hs._asm.cfpreferences"
+local cfpreferences = require "hs.cfpreferences"
 
 local execute       = hs.execute
 

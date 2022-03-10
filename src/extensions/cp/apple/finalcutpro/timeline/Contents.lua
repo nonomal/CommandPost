@@ -512,7 +512,7 @@ end
 --- A [Statement](cp.rx.go.Statement.md) which will select the specified list of `hs.axuielement` values in the Timeline Contents area.
 ---
 --- Parameters:
---- * clipsUI       - The table of `hs._asm.axuilement` values to select.
+--- * clipsUI       - The table of `hs.axuilement` values to select.
 ---
 --- Returns:
 --- * A [Statement](cp.rx.go.Statement.md) that will select the clips or throw an error if there is an issue.
@@ -539,7 +539,7 @@ end
 --- A [Statement](cp.rx.go.Statement.md) which will select the specified single `hs.axuielement` value in the Timeline Contents area.
 ---
 --- Parameters:
---- * clipUI       - The `hs._asm.axuilement` values to select.
+--- * clipUI       - The `hs.axuilement` values to select.
 ---
 --- Returns:
 --- * A [Statement](cp.rx.go.Statement.md) that will select the clip or throw an error if there is an issue.

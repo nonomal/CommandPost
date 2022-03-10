@@ -11,7 +11,7 @@ local i18n              = require "cp.i18n"
 
 local mod = {}
 
---- plugins.finalcutpro.touchbar.widgets.zoom.widget() -> `hs._asm.undocumented.touchbar.item`
+--- plugins.finalcutpro.touchbar.widgets.zoom.widget() -> `hs.touchbar.item`
 --- Function
 --- The Widget
 ---
@@ -19,7 +19,7 @@ local mod = {}
 ---  * None
 ---
 --- Returns:
----  * A `hs._asm.undocumented.touchbar.item`
+---  * A `hs.touchbar.item`
 function mod.widget()
 
     local canvasWidth, canvasHeight = 250, 30

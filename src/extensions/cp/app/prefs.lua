@@ -20,7 +20,7 @@
 
 local require       = require
 
-local cfprefs       = require "hs._asm.cfpreferences"
+local cfprefs       = require "hs.cfpreferences"
 local pathwatcher   = require "hs.pathwatcher"
 local prop          = require "cp.prop"
 

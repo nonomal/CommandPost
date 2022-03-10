@@ -217,7 +217,7 @@ function mod.stop()
     end
 end
 
--- puckWidget(id, puck) -> `hs._asm.undocumented.touchbar.item` object -> TouchBar Item
+-- puckWidget(id, puck) -> `hs.touchbar.item` object -> TouchBar Item
 -- Function
 -- Creates a Puck Widget.
 --
@@ -226,7 +226,7 @@ end
 --  * puck - a function that returns the `ColorPuck` to create the widget for.
 --
 -- Returns:
---  * A `hs._asm.undocumented.touchbar.item` object
+--  * A `hs.touchbar.item` object
 local function puckWidget(id, puck)
 
     --------------------------------------------------------------------------------
@@ -444,7 +444,7 @@ local function puckWidget(id, puck)
 
 end
 
--- groupPuck(id) -> `hs._asm.undocumented.touchbar.item` object
+-- groupPuck(id) -> `hs.touchbar.item` object
 -- Function
 -- Creates the Group Puck
 --
@@ -452,7 +452,7 @@ end
 --  * id - ID of the group as string
 --
 -- Returns:
---  * A `hs._asm.undocumented.touchbar.item` object
+--  * A `hs.touchbar.item` object
 local function groupPuck(id)
     local colorBoard = fcp.colorBoard
 

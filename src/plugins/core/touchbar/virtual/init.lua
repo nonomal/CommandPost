@@ -68,17 +68,17 @@ end))
 
 --- plugins.core.touchbar.virtual.touchbar() -> none
 --- Function
---- Returns the `hs._asm.undocumented.touchbar` object if it exists.
+--- Returns the `hs.touchbar` object if it exists.
 ---
 --- Parameters:
 ---  * None
 ---
 --- Returns:
----  * `hs._asm.undocumented.touchbar`
+---  * `hs.touchbar`
 function mod.touchbar()
     if not mod._touchbar then
         if mod.macOSVersionSupported() then
-            mod._touchbar = require "hs._asm.undocumented.touchbar"
+            mod._touchbar = require "hs.touchbar"
         else
             mod._touchbar = {
                 supported = function() return false end,

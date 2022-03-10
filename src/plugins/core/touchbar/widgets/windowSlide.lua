@@ -15,7 +15,7 @@ local mod = {}
 -- Window Slide ID
 local ID = "windowSlide"
 
---- plugins.core.touchbar.widgets.windowSlide.widget() -> `hs._asm.undocumented.touchbar.item`
+--- plugins.core.touchbar.widgets.windowSlide.widget() -> `hs.touchbar.item`
 --- Function
 --- The Widget
 ---
@@ -23,7 +23,7 @@ local ID = "windowSlide"
 ---  * None
 ---
 --- Returns:
----  * A `hs._asm.undocumented.touchbar.item`
+---  * A `hs.touchbar.item`
 function mod.widget()
 
     local widgetCanvas = canvas.new{x = 0, y = 0, h = 30, w = 150}

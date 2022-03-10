@@ -14,7 +14,7 @@ local config        = require("cp.config")
 local flicks        = require("cp.time.flicks")
 local tools         = require("cp.tools")
 
-local xml           = require("hs._asm.xml")
+local xml           = require("hs.xml")
 
 
 local mod = {}

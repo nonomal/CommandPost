@@ -44,4 +44,16 @@ package.preload['hs.window.layout']         = function() return require("hs.wind
 package.preload['hs.window.switcher']       = function() return require("hs.window_switcher") end
 package.preload['hs.window.tiling']         = function() return require("hs.window_tiling") end
 
+package.preload['hs.text.http']         	= function() return require("hs.libtext_http") end
+package.preload['hs.text.regex']         	= function() return require("hs.libtext_regex") end
+package.preload['hs.text.utf16']         	= function() return require("hs.libtext_utf16") end
+
+package.preload['hs.touchbar.bar']         	= function() return require("hs.libtouchbar_bar") end
+package.preload['hs.touchbar.item']         = function() return require("hs.libtouchbar_item") end
+package.preload['hs.touchbar.virtual']      = function() return require("hs.libtouchbar_virtual") end
+package.preload['hs.touchbar.debug']      	= function() return require("hs.libtouchbar_debug") end
+
+package.preload['hs.touchdevice.forcetouch']    = function() return require("hs.libtouchdevice_forcetouch") end
+package.preload['hs.touchdevice.watcher']      	= function() return require("hs.libtouchdevice_watcher") end
+
 return require'hs._coresetup'.setup(...)

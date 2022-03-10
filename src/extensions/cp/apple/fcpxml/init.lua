@@ -210,7 +210,7 @@ local fnutils               = require("hs.fnutils")
 local config                = require("cp.config")
 local tools                 = require("cp.tools")
 
-local xml                   = require("hs._asm.xml")
+local xml                   = require("hs.xml")
 
 local semver                = require("semver")
 

@@ -23,7 +23,7 @@ local i18n                      = require "cp.i18n"
 local tools                     = require "cp.tools"
 local ui                        = require "cp.web.ui"
 
-local xml                       = require "hs._asm.xml"
+local xml                       = require "hs.xml"
 
 local doesFileExist             = tools.doesFileExist
 local doEvery                   = timer.doEvery

@@ -14,7 +14,7 @@ local mod = {}
 -- Volume ID
 local ID = "volume"
 
---- plugins.core.touchbar.widgets.volume.widget() -> `hs._asm.undocumented.touchbar.item`
+--- plugins.core.touchbar.widgets.volume.widget() -> `hs.touchbar.item`
 --- Function
 --- The Widget
 ---
@@ -22,7 +22,7 @@ local ID = "volume"
 ---  * None
 ---
 --- Returns:
----  * A `hs._asm.undocumented.touchbar.item`
+---  * A `hs.touchbar.item`
 function mod.widget()
 
     mod.item = mod._manager.touchbar().item.newSlider(ID)

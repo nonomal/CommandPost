@@ -33,7 +33,7 @@ local text                      = require "cp.web.text"
 local tools                     = require "cp.tools"
 local watcher                   = require "cp.watcher"
 
-local xml                       = require "hs._asm.xml"
+local xml                       = require "hs.xml"
 
 local v                         = require "semver"
 

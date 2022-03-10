@@ -161,7 +161,7 @@ function mod.findMagicMouses()
     --------------------------------------------------------------------------------
     -- Only start this extension if required:
     --------------------------------------------------------------------------------
-    touchdevice = require("hs._asm.undocumented.touchdevice")
+    touchdevice = require("hs.touchdevice")
 
     --------------------------------------------------------------------------------
     -- Search for Magic Mouses:
@@ -215,7 +215,7 @@ end
 --
 -- Parameters:
 --  * `self` - the touch device object for which the callback is being invoked for
---  * `touch` - a table containing an array of touch tables as described in `hs._asm.undocumented.touchdevice.touchData` for each of the current touches detected by the touch device.
+--  * `touch` - a table containing an array of touch tables as described in `hs.touchdevice.touchData` for each of the current touches detected by the touch device.
 --  * `timestamp` - a number specifying the timestamp for the frame.
 --  * `frame` - an integer specifying the frame ID
 --

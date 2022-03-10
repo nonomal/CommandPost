@@ -350,7 +350,7 @@ end
 -- * create    - Defaults to `false`. If `true`, and the application is running, the observer will be created.
 --
 -- Returns:
--- * The current `hs._asm.axuilelement.observer`, or `nil` if it does not exist and/or could not be created.
+-- * The current `hs.axuilelement.observer`, or `nil` if it does not exist and/or could not be created.
 function mod.mt:_observer(create)
 
     --------------------------------------------------------------------------------
