@@ -322,6 +322,22 @@ function fcp.lazy.prop:isUnsupported()
     return self.isInstalled:AND(self.isSupported:NOT())
 end
 
+--- cp.apple.finalcutpro:mainMenuName() -> string
+--- Method
+--- Returns the main "Final Cut Pro" menubar label.
+---
+--- Parameters:
+---  * None
+---
+--- Returns:
+---  * A string, either "Final Cut Pro" or "Final Cut Pro Trial"
+function fcp:mainMenuName()
+    if self:bundleID() == "com.apple.FinalCutTrial" then
+        return "Final Cut Pro Trial"
+    end
+    return "Final Cut Pro"
+end
+
 --- cp.apple.finalcutpro:string(key[, locale[, quiet]]) -> string
 --- Method
 --- Looks up an application string with the specified `key`. If no `locale` value is provided, the [current locale](#currentLocale) is used.
@@ -927,17 +943,16 @@ end
 --- Returns:
 ---  * A boolean value indicating whether the AppleScript succeeded or not
 function fcp:importXML(path)
-    --if self:isRunning() then
-        local appleScript = [[
-            set whichSharedXMLPath to "]] .. path .. [["
-            tell application "Final Cut Pro"
-                activate
-                open POSIX file whichSharedXMLPath as string
-            end tell
-        ]]
-        local bool, _, _ = osascript.applescript(appleScript)
-        return bool
-    --end
+    local appName = self:app():mainMenuName()
+    local appleScript = [[
+        set whichSharedXMLPath to "]] .. path .. [["
+        tell application "]] .. appName .. [["
+            activate
+            open POSIX file whichSharedXMLPath as string
+        end tell
+    ]]
+    local bool, _, _ = osascript.applescript(appleScript)
+    return bool
 end
 
 --- cp.apple.finalcutpro:openAndSavePanelDefaultPath <cp.prop: string>
