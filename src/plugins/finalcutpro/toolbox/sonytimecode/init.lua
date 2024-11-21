@@ -917,6 +917,8 @@ local function processFCPXML(path)
     --------------------------------------------------------------------------------
     xmlOutput = tools.replace(xmlOutput, [[<fcpxml version="1.12">]], [[<fcpxml version="1.11">]])
     xmlOutput = tools.replace(xmlOutput, [[<fcpxml version='1.12'>]], [[<fcpxml version='1.11'>]])
+    xmlOutput = tools.replace(xmlOutput, [[<fcpxml version="1.13">]], [[<fcpxml version="1.11">]])
+    xmlOutput = tools.replace(xmlOutput, [[<fcpxml version='1.13'>]], [[<fcpxml version='1.11'>]])
 
     --------------------------------------------------------------------------------
     -- Output a temporary file:
