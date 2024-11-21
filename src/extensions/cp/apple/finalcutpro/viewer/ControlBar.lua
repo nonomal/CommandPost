@@ -18,6 +18,8 @@ local Group             = require "cp.ui.Group"
 local Image             = require "cp.ui.Image"
 local StaticText        = require "cp.ui.StaticText"
 
+local semver            = require "semver"
+
 local rightToLeft       = axutils.compare.rightToLeft
 local cache             = axutils.cache
 local childFromBottom   = axutils.childFromBottom
@@ -29,6 +31,8 @@ local find              = string.find
 local ninjaMouseClick   = tools.ninjaMouseClick
 
 local ControlBar = Group:subclass("cp.apple.finalcutpro.viewer.ControlBar")
+
+local macOSVersion      = tools.macOSVersion()
 
 --- cp.apple.finalcutpro.viewer.ControlBar.matches(element) -> boolean
 --- Function
@@ -43,6 +47,28 @@ function ControlBar.static.matches(element)
     if Group.matches(element) and #element >= 4 then
         -- Note: sorting right-to-left
         local children = axutils.children(element, rightToLeft)
+
+        --------------------------------------------------------------------------------
+        -- macOS 15 Sequoia seems to have a slightly different window layout:
+        --------------------------------------------------------------------------------
+        if semver(macOSVersion) >= semver("15.0.0") then
+			return  Button.matches(children[1])
+				and Button.matches(children[2])
+				and StaticText.matches(children[4])
+				and (
+					(
+						-- Normal Control Bar:
+						Button.matches(children[3])
+						and Button.matches(children[5])
+					)
+					or
+					(
+						-- Timecode Entry Mode:
+						Image.matches(children[4])
+					)
+				)
+        end
+
         return  Button.matches(children[1])
             and Button.matches(children[2])
             and StaticText.matches(children[3])
