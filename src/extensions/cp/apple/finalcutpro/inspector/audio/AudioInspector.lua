@@ -113,8 +113,8 @@ function AudioInspector.lazy.value:content()
     local ui = self.UI:mutate(ax.childMatching(SplitGroup.matches))
     return SplitGroup(self, ui, {
         TopProperties,
-        MainProperties,
         Group,
+        MainProperties,
         Splitter,
         TextArea,
         ScrollArea
@@ -126,7 +126,7 @@ function AudioInspector.lazy.value:topProperties()
 end
 
 function AudioInspector.lazy.value:mainProperties()
-    return self.content.children[2]
+    return self.content.children[3]
 end
 
 --- cp.apple.finalcutpro.inspector.color.VideoInspector.volume <cp.prop: PropertyRow>
